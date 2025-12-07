@@ -28,7 +28,7 @@ public class PagamentoService {
 	@Transactional
 	public PagamentoResponse criarPagamento(CriarPagamentoRequest request) {
 		Pagamento pagamento = pagamentoMapper.toEntity(request);
-		pagamento.setStatus(StatusPagamento.SUCESSO);
+		pagamento.setStatus(StatusPagamento.PROCESSANDO);
 		pagamento.setDataCriacao(LocalDateTime.now());
 		Pagamento salvo = pagamentoRepository.save(pagamento);
 		return pagamentoMapper.toResponse(salvo);
