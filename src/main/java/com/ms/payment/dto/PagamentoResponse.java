@@ -6,14 +6,14 @@ import java.time.LocalDateTime;
 public class PagamentoResponse {
     private Long id;
     private BigDecimal valor;
-    private Long clienteId;
+    private String clienteId;
     private String status;
     private String metodoPagamento;
     private LocalDateTime dataCriacao;
 
     public PagamentoResponse() {}
 
-    public PagamentoResponse(Long id, BigDecimal valor, Long clienteId, String status, String metodoPagamento,
+    public PagamentoResponse(Long id, BigDecimal valor, String clienteId, String status, String metodoPagamento,
             LocalDateTime dataCriacao) {
         this.id = id;
         this.valor = valor;
@@ -39,11 +39,11 @@ public class PagamentoResponse {
         this.valor = valor;
     }
 
-    public Long getClienteId() {
+    public String getClienteId() {
         return clienteId;
     }
 
-    public void setClienteId(Long clienteId) {
+    public void setClienteId(String clienteId) {
         this.clienteId = clienteId;
     }
 

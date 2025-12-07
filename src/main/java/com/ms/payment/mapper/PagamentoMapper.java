@@ -16,6 +16,7 @@ public interface PagamentoMapper {
     @Mapping(target = "status", ignore = true)
     @Mapping(target = "dataCriacao", ignore = true)
     @Mapping(source = "metodoPagamento", target = "metodoPagamento")
+    @Mapping(source = "clienteId", target = "clienteId")
     Pagamento toEntity(CriarPagamentoRequest dto);
 
     @Mapping(source = "metodoPagamento", target = "metodoPagamento", qualifiedByName = "enumToString")
