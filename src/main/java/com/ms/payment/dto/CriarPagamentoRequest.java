@@ -3,23 +3,23 @@ package com.ms.payment.dto;
 import java.math.BigDecimal;
 
 public class CriarPagamentoRequest {
-    private Long clienteId;
+    private String clienteId;
     private BigDecimal valor;
     private String metodoPagamento;
 
     public CriarPagamentoRequest() {}
 
-    public CriarPagamentoRequest(Long clienteId, BigDecimal valor, String metodoPagamento) {
+    public CriarPagamentoRequest(String clienteId, BigDecimal valor, String metodoPagamento) {
         this.clienteId = clienteId;
         this.valor = valor;
         this.metodoPagamento = metodoPagamento;
     }
 
-    public Long getClienteId() {
+    public String getClienteId() {
         return clienteId;
     }
 
-    public void setClienteId(Long clienteId) {
+    public void setClienteId(String clienteId) {
         this.clienteId = clienteId;
     }
 

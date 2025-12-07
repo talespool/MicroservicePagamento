@@ -15,7 +15,7 @@ public class Pagamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long clienteId;
+    private String clienteId;
     private BigDecimal valor;
     private LocalDateTime dataCriacao;
 
@@ -27,7 +27,7 @@ public class Pagamento {
 
     public Pagamento() {}
 
-    public Pagamento(Long id, Long clienteId, BigDecimal valor, LocalDateTime dataCriacao, StatusPagamento status,
+    public Pagamento(Long id, String clienteId, BigDecimal valor, LocalDateTime dataCriacao, StatusPagamento status,
                      MetodoPagamento metodoPagamento) {
         this.id = id;
         this.clienteId = clienteId;
@@ -45,11 +45,11 @@ public class Pagamento {
         this.id = id;
     }
 
-    public Long getClienteId() {
+    public String getClienteId() {
         return clienteId;
     }
 
-    public void setClienteId(Long clienteId) {
+    public void setClienteId(String clienteId) {
         this.clienteId = clienteId;
     }
 
