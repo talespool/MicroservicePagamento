@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/pagamentos")
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PATCH})
 public class PagamentoController {
 
     private final PagamentoService pagamentoService;
